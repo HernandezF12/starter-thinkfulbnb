@@ -55,7 +55,7 @@ main img {
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
-  text-align: center;
+  text-align: right;
 }
 
 .logo {
@@ -68,16 +68,7 @@ header nav ul li {
   list-style-type: none;
 }
 
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 20px 0 0;
-}
 
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
-}
 
 /* -------  Search Form ------- */
 form {
@@ -117,3 +108,56 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 600px) {
+  header div {
+    text-align: left;
+  }
+  header nav ul li a{
+    flex-direction: row-reverse;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px 0 0;
+  }
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+  body main section div img {
+    width: 20%;
+    flex-direction: row;
+  }
+  body main section div p {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  form button {
+    justify-content: space-around;
+    width: 15%;
+    padding: 10px;
+  }
+  form {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+  main section div {
+    flex-direction: column;
+    justify-content: space-evenly
+  }
+  .ideas img {
+    width: 25%;
+  }
+  .idea {
+    display: flex;
+    flex-direction: column;
+  }
+  .alternate-background {
+    display: flex;
+    justify-content: space-between;
+  }
+  .background-alternate img {
+    width: 35%;
+    display: flex;
+  }
+}
